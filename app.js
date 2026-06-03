@@ -188,12 +188,12 @@ function updateCount(n) {
 function capitalise(str) {
   const labels = {
     'Seni Tari': 'Seni Tari',
-    musik:     'Musik',
-    edukasi:   'Edukasi',
-    gaming:    'Gaming',
-    film:      'Film & Sinema',
-    travel:    'Travel',
-    kuliner:   'Kuliner'
+    'Film Pendek ID': 'Film Pendek ID',
+    'Short Movie EN': 'Short Movie EN',
+    'Reportase':      'Reportase',
+    'Dokudrama':      'Dokudrama',
+    'Dokumentasi':    'Dokumentasi',
+    'Kompilasi':      'Kompilasi'
   };
   return labels[str] || str.charAt(0).toUpperCase() + str.slice(1);
 }
