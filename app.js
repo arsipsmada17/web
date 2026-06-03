@@ -170,7 +170,7 @@ function updateCount(n) {
 
 function capitalise(str) {
   const labels = {
-    teknologi: 'Teknologi',
+    senitari: 'Seni Tari',
     musik:     'Musik',
     edukasi:   'Edukasi',
     gaming:    'Gaming',
