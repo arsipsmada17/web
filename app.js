@@ -89,6 +89,22 @@ function filterVideos() {
 }
 
 // ── RENDER VIDEOS ─────────────────────────────────────────────
+const cardObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const card = entry.target;
+      // Swap placeholder thumb for real image
+      const img = card.querySelector('img[data-src]');
+      if (img) {
+        img.src = img.dataset.src;
+        img.removeAttribute('data-src');
+      }
+      card.classList.add('card-visible');
+      cardObserver.unobserve(card);
+    }
+  });
+}, { rootMargin: '100px' });
+
 function renderVideos(videos) {
   const grid  = document.getElementById('videoGrid');
   const empty = document.getElementById('emptyState');
@@ -104,12 +120,12 @@ function renderVideos(videos) {
   videos.forEach((v, i) => {
     const thumb = `https://img.youtube.com/vi/${v.youtubeId}/mqdefault.jpg`;
     const card  = document.createElement('div');
-    card.className  = 'video-card';
+    card.className  = 'video-card card-hidden';
     card.style.animationDelay = `${i * 40}ms`;
     card.onclick    = () => openModal(v);
     card.innerHTML  = `
       <div class="thumb-wrap">
-        <img src="${thumb}" alt="${escHtml(v.title)}" loading="lazy" />
+        <img data-src="${thumb}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="${escHtml(v.title)}" loading="lazy" />
         <div class="play-overlay">
           <div class="play-btn">▶</div>
         </div>
@@ -122,6 +138,7 @@ function renderVideos(videos) {
       </div>
     `;
     grid.appendChild(card);
+    cardObserver.observe(card);
   });
 }
 
