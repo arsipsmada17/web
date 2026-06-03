@@ -132,33 +132,14 @@ function openModal(video) {
 
   document.getElementById('modalCat').textContent         = video.category;
   document.getElementById('modalTitle').textContent       = video.title;
-  document.getElementById('modalDesc').textContent        = video.description;
-  document.getElementById('modalChannelName').textContent = video.channel;
-  document.getElementById('modalDurationVal').textContent = video.duration;
 
   // Autoplay embed
   // Note: origin must NOT be encoded, and file:// origin ("null") must be omitted
   const origin = location.origin !== 'null' ? `&origin=${location.origin}` : '';
   iframe.src = `https://www.youtube-nocookie.com/embed/${video.youtubeId}?autoplay=1&rel=0&modestbranding=1${origin}`;
 
-  // Handle Error 153 — video embedding disabled by owner
   iframe.onerror = null;
-  iframe.onload = function () {
-    // YouTube doesn't expose errors via iframe events, so we show a fallback
-    // button in case the user sees Error 153
-    const existing = document.getElementById('yt-fallback');
-    if (existing) existing.remove();
-    const fallback = document.createElement('div');
-    fallback.id = 'yt-fallback';
-    fallback.innerHTML = `
-      <p style="margin:0 0 8px;font-size:13px;opacity:.7">Video tidak bisa diputar di sini?</p>
-      <a href="https://www.youtube.com/watch?v=${video.youtubeId}" target="_blank" rel="noopener"
-         style="display:inline-block;padding:8px 18px;background:#ff0000;color:#fff;border-radius:6px;text-decoration:none;font-size:13px;font-weight:600;">
-        ▶ Tonton di YouTube
-      </a>`;
-    fallback.style.cssText = 'text-align:center;padding:12px 0 4px;';
-    iframe.closest('.modal-video-wrap').insertAdjacentElement('afterend', fallback);
-  };
+  iframe.onload = null;
 
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -174,8 +155,6 @@ function closeModalDirect() {
   const overlay = document.getElementById('modalOverlay');
   overlay.classList.remove('open');
   document.getElementById('modalIframe').src = '';
-  const fallback = document.getElementById('yt-fallback');
-  if (fallback) fallback.remove();
   document.body.style.overflow = '';
 }
 
