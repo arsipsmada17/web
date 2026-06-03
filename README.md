@@ -1,4 +1,4 @@
-# StreamVault 🎬
+# Begarlist 16 🎬
 
 Website video streaming minimalis berbasis YouTube embed — tanpa upload, tanpa server.
 
@@ -39,7 +39,7 @@ Edit file `js/data.js`, tambahkan objek video baru ke array `VIDEOS`:
 ## 📁 Struktur File
 
 ```
-streamvault/
+begarlist16/
 ├── index.html        ← Halaman utama
 ├── css/
 │   └── style.css     ← Semua styling

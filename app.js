@@ -1,5 +1,5 @@
 // ============================================================
-//  StreamVault — App Logic
+//  Begarlist 16 — App Logic
 // ============================================================
 
 let currentCategory = 'all';
@@ -118,7 +118,7 @@ function renderVideos(videos) {
       <div class="card-body">
         <span class="card-cat">${v.category}</span>
         <p class="card-title">${escHtml(v.title)}</p>
-        <p class="card-channel">${escHtml(v.channel)}</p>
+        <p class="card-channel" style="display:none">${escHtml(v.channel)}</p>
       </div>
     `;
     grid.appendChild(card);
