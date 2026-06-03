@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StreamVault — Video Streaming</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="#" class="logo" onclick="showHome()">
+        <span class="logo-mark">▶</span>
+        <span class="logo-text">StreamVault</span>
+      </a>
+
+      <div class="search-wrap">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Cari video..."
+          oninput="handleSearch(this.value)"
+        />
+        <span class="search-icon">⌕</span>
+      </div>
+
+      <div class="header-actions">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <span id="themeIcon">☀</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CATEGORIES NAV -->
+  <nav class="category-nav">
+    <div class="category-inner">
+      <button class="cat-btn active" data-cat="all" onclick="filterCategory('all', this)">Semua</button>
+      <button class="cat-btn" data-cat="teknologi" onclick="filterCategory('teknologi', this)">Teknologi</button>
+      <button class="cat-btn" data-cat="musik" onclick="filterCategory('musik', this)">Musik</button>
+      <button class="cat-btn" data-cat="edukasi" onclick="filterCategory('edukasi', this)">Edukasi</button>
+      <button class="cat-btn" data-cat="gaming" onclick="filterCategory('gaming', this)">Gaming</button>
+      <button class="cat-btn" data-cat="film" onclick="filterCategory('film', this)">Film & Sinema</button>
+      <button class="cat-btn" data-cat="travel" onclick="filterCategory('travel', this)">Travel</button>
+      <button class="cat-btn" data-cat="kuliner" onclick="filterCategory('kuliner', this)">Kuliner</button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION (home only) -->
+  <section class="hero" id="heroSection">
+    <div class="hero-inner">
+      <p class="hero-label">Pilihan Editor</p>
+      <h1 class="hero-title">Temukan video<br/>terbaik pilihan kami.</h1>
+      <p class="hero-sub">Koleksi video kurasi dari seluruh dunia, tanpa iklan berlebihan.</p>
+      <button class="hero-cta" onclick="scrollToVideos()">Jelajahi Sekarang →</button>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="main" id="mainContent">
+
+    <!-- Section title -->
+    <div class="section-header" id="sectionHeader">
+      <h2 class="section-title" id="sectionTitle">Semua Video</h2>
+      <span class="section-count" id="sectionCount"></span>
+    </div>
+
+    <!-- Search results notice -->
+    <div class="search-notice" id="searchNotice" style="display:none">
+      <span>Hasil pencarian untuk: </span><strong id="searchTerm"></strong>
+      <button class="clear-search" onclick="clearSearch()">✕ Hapus</button>
+    </div>
+
+    <!-- Video Grid -->
+    <div class="video-grid" id="videoGrid"></div>
+
+    <!-- Empty state -->
+    <div class="empty-state" id="emptyState" style="display:none">
+      <div class="empty-icon">◎</div>
+      <p class="empty-title">Tidak ada video ditemukan</p>
+      <p class="empty-sub">Coba kata kunci lain atau pilih kategori berbeda.</p>
+    </div>
+
+  </main>
+
+  <!-- VIDEO MODAL -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+    <div class="modal" id="modal">
+      <button class="modal-close" onclick="closeModalDirect()">✕</button>
+      <div class="modal-video-wrap">
+        <iframe
+          id="modalIframe"
+          src=""
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="modal-info">
+        <span class="modal-cat" id="modalCat"></span>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-meta">
+          <span id="modalChannel">📺 &nbsp;<span id="modalChannelName"></span></span>
+          <span id="modalDuration">⏱ &nbsp;<span id="modalDurationVal"></span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 StreamVault · Dibuat dengan ♥ · Semua video dari YouTube</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
