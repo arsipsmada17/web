@@ -15,206 +15,400 @@
 // ============================================================
 
 const VIDEOS = [
-  // ── TEKNOLOGI ──────────────────────────────────────────────
   {
     id: 1,
-    title: "The Entire History of the Computer",
-    channel: "Fireship",
+    title: "Seni Tari - 10 IPS 3 0  Intro",
+    channel: "null",
     category: "Seni Tari",
-    youtubeId: "O5nskjZ_GoI",
-    duration: "12:42",
-    description: "Perjalanan sejarah komputer dari awal hingga era modern — dikemas padat dan menarik."
+    youtubeId: "whudOT_XDko",
+    duration: "0:15",
+    description: "null"
   },
   {
     id: 2,
-    title: "How AI Image Generation Works",
-    channel: "Computerphile",
+    title: "Seni Tari - 1  Kelompok Tari Tongkat Kreasi   Aditya, Fikri, Habin, Rizaldi",
+    channel: "null",
     category: "Seni Tari",
-    youtubeId: "1CIpzeNxIhU",
-    duration: "18:06",
-    description: "Penjelasan mendalam tentang cara kerja AI generatif dalam menghasilkan gambar."
+    youtubeId: "0VJJhCa9prw",
+    duration: "5:27",
+    description: "null"
   },
   {
     id: 3,
-    title: "100 Computer Science Concepts in 10 Minutes",
-    channel: "Fireship",
+    title: "Seni Tari - 2  Kelompok Tari Rampak   Azzam, helmi, Ivan, Yoga",
+    channel: "null",
     category: "Seni Tari",
-    youtubeId: "SzJ46YA_RaA",
-    duration: "10:14",
-    description: "100 konsep ilmu komputer dijelaskan dengan cepat, cocok untuk siapapun."
+    youtubeId: "st5pChFI5ic",
+    duration: "5:00",
+    description: "null"
   },
-
-  // ── MUSIK ──────────────────────────────────────────────────
   {
     id: 4,
-    title: "Lo-Fi Hip Hop Radio — Beats to Study/Relax",
-    channel: "Lofi Girl",
-    category: "musik",
-    youtubeId: "jfKfPfyJRdk",
-    duration: "Live",
-    description: "Playlist lo-fi hip hop yang sempurna untuk menemani belajar atau bersantai."
+    title: "Seni Tari - 3  Kelompok Tari Kebrok Anting   Anting   Anggie, Amanda, Rizka, Catur",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "sa9IbqzxHQE",
+    duration: "5:00",
+    description: "null"
   },
   {
     id: 5,
-    title: "The Science of Music — How Sound Becomes Emotion",
-    channel: "Vox",
-    category: "musik",
-    youtubeId: "aSvPVNvjrCk",
-    duration: "7:39",
-    description: "Mengapa musik bisa membuat kita menangis, semangat, atau berdansa? Sains menjawabnya."
+    title: "Seni Tari - 4  Kelompok Tari Rampak   Lintang, Fio, Damay",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "mMI_kSiz6u0",
+    duration: "4:55",
+    description: "null"
   },
   {
     id: 6,
-    title: "Classical Music for Focus and Concentration",
-    channel: "Quiet Quest",
-    category: "musik",
-    youtubeId: "H5EvpMGMvXE",
-    duration: "3:00:00",
-    description: "Koleksi musik klasik terbaik untuk meningkatkan fokus dan konsentrasi."
+    title: "Seni Tari - 5  Kelompok Tari Manuk dadali   Aniestiyana, Regita, Nabila, Almira",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "gGVpfICIwss",
+    duration: "4:38",
+    description: "null"
   },
-
-  // ── EDUKASI ────────────────────────────────────────────────
   {
     id: 7,
-    title: "How The Economic Machine Works by Ray Dalio",
-    channel: "Principles by Ray Dalio",
-    category: "edukasi",
-    youtubeId: "PHe0bXAIuk0",
-    duration: "30:59",
-    description: "Penjelasan komprehensif tentang bagaimana mesin ekonomi bekerja, oleh Ray Dalio."
+    title: "Seni Tari - 6  Kelompok Tari Rampak   Titik, Kartika, Lilin, Ayu",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "LLZaXtTt7mA",
+    duration: "5:26",
+    description: "null"
   },
   {
     id: 8,
-    title: "The Most Powerful Idea in the World",
-    channel: "Veritasium",
-    category: "edukasi",
-    youtubeId: "X9RYuvPCQUA",
-    duration: "20:38",
-    description: "Ide yang mengubah dunia dan mendorong revolusi industri — dikupas secara mendalam."
+    title: "Seni Tari - 7  Kelompok Tari Oglek   Deajeng, Refina, Nurul Khusna",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "1cFV75Xp6lo",
+    duration: "5:02",
+    description: "null"
   },
   {
     id: 9,
-    title: "Why the Universe Seems So Strange",
-    channel: "TED",
-    category: "edukasi",
-    youtubeId: "gKwi8_82E24",
-    duration: "14:32",
-    description: "Richard Feynman menjelaskan mengapa alam semesta tampak begitu aneh dan menakjubkan."
+    title: "Seni Tari - 8  Kelompok Tari Kubro Siswo   Adam Dan Bayu",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "mNKPHjsG9Qs",
+    duration: "4:51",
+    description: "null"
   },
-
-  // ── GAMING ─────────────────────────────────────────────────
   {
     id: 10,
-    title: "The History of Video Games",
-    channel: "Gaming Historian",
-    category: "gaming",
-    youtubeId: "3MteSlpxCpo",
-    duration: "22:10",
-    description: "Sejarah lengkap industri video game dari masa ke masa yang wajib diketahui."
+    title: "Seni Tari - 9  Kelompok Tari Topeng Ireng   Fariz, Cesarioni, Bintang, Daffa",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "UAIGcgxuEbw",
+    duration: "8:14",
+    description: "null"
   },
   {
     id: 11,
-    title: "Why Minecraft Is Timeless",
-    channel: "Like Stories of Old",
-    category: "gaming",
-    youtubeId: "yVMNxPMOoSc",
-    duration: "20:14",
-    description: "Analisis mendalam mengapa Minecraft tetap relevan dan dicintai lintas generasi."
+    title: "Seni Tari - 10 IPS 3 10  Credit",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "dt8kaUSTsl4",
+    duration: "4:42",
+    description: "null"
   },
   {
     id: 12,
-    title: "The Art of Video Games",
-    channel: "The Art Assignment",
-    category: "gaming",
-    youtubeId: "u2iKpuLqUhI",
-    duration: "10:45",
-    description: "Membahas apakah video game bisa dikategorikan sebagai karya seni."
+    title: "Seni Tari - BTS - 1  Kelompok Tari Tongkat Kreasi   Aditya, Fikri, Habin, Rizaldi",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "JLRbgf5GZAs",
+    duration: "5:38",
+    description: "null"
   },
-
-  // ── FILM & SINEMA ──────────────────────────────────────────
   {
     id: 13,
-    title: "Why Wes Anderson's Films Feel So Unique",
-    channel: "Lessons from the Screenplay",
-    category: "film",
-    youtubeId: "nX5bQr23Blg",
-    duration: "15:21",
-    description: "Mengupas gaya sinematik khas Wes Anderson yang unik dan mudah dikenali."
+    title: "Seni Tari  - BTS - 2. Kelompok Tari Rampak - Azzam, helmi, Ivan, Yoga",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "rQU4l8sSK5w",
+    duration: "1:39",
+    description: "null"
   },
   {
     id: 14,
-    title: "How Sound Design Makes Movies",
-    channel: "Vox",
-    category: "film",
-    youtubeId: "ByhNUjRNdE0",
-    duration: "8:12",
-    description: "Peran desain suara yang sering terlupakan namun sangat krusial dalam sebuah film."
+    title: "Seni Tari - BTS 1 - 8  Kelompok Tari Kubro Siswo   Adam Dan Bayu",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "1ZoWNafBugk",
+    duration: "20:05",
+    description: "null"
   },
   {
     id: 15,
-    title: "The Language of Cinematography",
-    channel: "Now You See It",
-    category: "film",
-    youtubeId: "xdAhCuWy4Cg",
-    duration: "11:05",
-    description: "Bagaimana pergerakan kamera dan pilihan lensa menceritakan sebuah kisah."
+    title: "Seni Tari - BTS 2 - 8  Kelompok Tari Kubro Siswo   Adam Dan Bayu",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "KgZiXEWDlo0",
+    duration: "3:59",
+    description: "null"
   },
-
-  // ── TRAVEL ─────────────────────────────────────────────────
   {
     id: 16,
-    title: "Japan in 4K — Land of Wonders",
-    channel: "Beautiful Destinations",
-    category: "travel",
-    youtubeId: "t4KVeZQrOjA",
-    duration: "5:10",
-    description: "Perjalanan visual menakjubkan menjelajahi keindahan Jepang dalam resolusi 4K."
+    title: "Seni Tari - BTS - 5. Kelompok Tari Manuk dadali - Aniestiyana, Regita, Nabila, Almira",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "Z5qbCd-IOLI",
+    duration: "4:37",
+    description: "null"
   },
   {
     id: 17,
-    title: "Exploring the Streets of Kyoto",
-    channel: "Abroad in Japan",
-    category: "travel",
-    youtubeId: "o6GqJe68D8Y",
-    duration: "16:44",
-    description: "Berjalan-jalan menelusuri gang-gang bersejarah kota Kyoto yang menawan."
+    title: "Seni Tari - BTS - 9. Kelompok Tari Topeng Ireng - Fariz, Cesarioni, Bintang, Daffa",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "IB38tqLRxls",
+    duration: "43:00",
+    description: "null"
   },
   {
     id: 18,
-    title: "Iceland: The Land of Fire and Ice",
-    channel: "Lost LeBlancs",
-    category: "travel",
-    youtubeId: "cKYYMrk44n8",
-    duration: "19:53",
-    description: "Menjelajahi Islandia — negeri gletser, gunung berapi, dan aurora borealis."
+    title: "Seni Tari - 10 IPS 1 DAYAKAN IPS 1",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "Ekm7BFHqTwM",
+    duration: "7:57",
+    description: "null"
   },
-
-  // ── KULINER ────────────────────────────────────────────────
   {
     id: 19,
-    title: "The Perfect Ramen — Science of Flavor",
-    channel: "Ethan Chlebowski",
-    category: "kuliner",
-    youtubeId: "84Ur8bfPBVQ",
-    duration: "14:28",
-    description: "Sains di balik ramen sempurna — dari kaldu hingga pemilihan mie yang tepat."
+    title: "Seni Tari - 10 IPS 1 loteng 22",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "za_EwxgHjgA",
+    duration: "2:03",
+    description: "null"
   },
   {
     id: 20,
-    title: "Street Food Indonesia — Java Edition",
-    channel: "Mark Wiens",
-    category: "kuliner",
-    youtubeId: "RM7UpRFSQiw",
-    duration: "22:55",
-    description: "Petualangan kuliner jalanan di Jawa — dari soto, nasi goreng, hingga gudeg."
+    title: "Seni Tari - 10 IPS 1 Tari Gembira",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "QV-OGbme4hs",
+    duration: "8:39",
+    description: "null"
   },
   {
     id: 21,
-    title: "Gordon Ramsay's Ultimate Cooking Guide",
-    channel: "Gordon Ramsay",
-    category: "kuliner",
-    youtubeId: "M3RJmwkRb-4",
-    duration: "28:37",
-    description: "Panduan memasak lengkap dari chef berbintang Gordon Ramsay untuk pemula."
+    title: "Seni Tari - 10 IPS 1 Tari SMAN 2",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "2hqXtPeOjAQ",
+    duration: "4:41",
+    description: "null"
+  },
+  {
+    id: 22,
+    title: "Seni Tari - 10 IPS 1 Tari Unyu",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "5sGTh4W4e8Q",
+    duration: "9:42",
+    description: "null"
+  },
+  {
+    id: 23,
+    title: "Seni Tari - 10 IPS 1 Tari Tepleret",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "eoctEXNcTt4",
+    duration: "6:45",
+    description: "null"
+  },
+  {
+    id: 24,
+    title: "Seni Tari - BTS - 10 IPS 1 Tari Tepleret",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "ISYcjff7Yo4",
+    duration: "2:22",
+    description: "null"
+  },
+  {
+    id: 25,
+    title: "Seni Tari - 10 IPA 2 Aliva, Erizta, Rizqi, Salsa",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "dfho41S1k9A",
+    duration: "5:57",
+    description: "null"
+  },
+  {
+    id: 26,
+    title: "Seni Tari - 10 IPA 2 Dewry A, Riski Wulanyunitasari",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "LZMynXlefa8",
+    duration: "11:27",
+    description: "null"
+  },
+  {
+    id: 27,
+    title: "Seni Tari - 10 IPA 2 Tari Topeng Ijo",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "4_9jWkAinSo",
+    duration: "4:19",
+    description: "null"
+  },
+  {
+    id: 28,
+    title: "Seni Tari - 10 IPA 3 1",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "4GxLQd81J-I",
+    duration: "2:43",
+    description: "null"
+  },
+  {
+    id: 29,
+    title: "Seni Tari - 10 IPA 3 2",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "xlM3vu4jBkI",
+    duration: "5:53",
+    description: "null"
+  },
+  {
+    id: 30,
+    title: "Seni Tari - 10 IPA 3  Sheila, Sofia, Putri, Nicky, Candra Kurnia",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "7abIXCfCPE0",
+    duration: "4:32",
+    description: "null"
+  },
+  {
+    id: 31,
+    title: "Seni Tari - 10 IPA 3 Hamah, Hesti, Nisaul, Rizky set, Uswatun Han",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "OQM_UwrNjro",
+    duration: "4:44",
+    description: "null"
+  },
+  {
+    id: 32,
+    title: "Seni Tari - 10 IPA 4 Silvia, Apple Jordan",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "B2QGwHgKAPI",
+    duration: "6:23",
+    description: "null"
+  },
+  {
+    id: 33,
+    title: "Seni Tari - 11 IPS 1 Tari Dindin Badindin Anggi, catur, refina, amanda",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "lV7m_uPn7hQ",
+    duration: "6:07",
+    description: "null"
+  },
+  {
+    id: 34,
+    title: "Seni Tari - 11 IPA 2 TARI GANDHIS",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "v09wUONosDc",
+    duration: "8:22",
+    description: "null"
+  },
+  {
+    id: 35,
+    title: "Seni Tari - 11 IPS 1",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "DRE4a3OJ4SM",
+    duration: "3:41",
+    description: "null"
+  },
+  {
+    id: 36,
+    title: "Seni Tari - 11 IPS 1 Tari Elizabeth",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "rEoKwkBhsxI",
+    duration: "3:59",
+    description: "null"
+  },
+  {
+    id: 37,
+    title: "Seni Tari - 11 IPS 2",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "tjsiqZ9sw2o",
+    duration: "13:43",
+    description: "null"
+  },
+  {
+    id: 38,
+    title: "Seni Tari - 11 IPS 3 indang true bener",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "2SW51N3KSyk",
+    duration: "4:31",
+    description: "null"
+  },
+  {
+    id: 39,
+    title: "Seni Tari - 11 IPS 3 LANCANG KUNING",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "mgpJRqbhOPY",
+    duration: "5:52",
+    description: "null"
+  },
+  {
+    id: 40,
+    title: "Seni Tari - 11 IPS 3 Tari Anies",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "bKaEDtS3Dqs",
+    duration: "4:27",
+    description: "null"
+  },
+  {
+    id: 41,
+    title: "Seni Tari - 11 IPS 3 tari well 01",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "_3gBP2uTQI0",
+    duration: "5:31",
+    description: "null"
+  },
+  {
+    id: 42,
+    title: "Seni Tari - 11 IPS 3 tari almost done",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "yAqd17gPcyg",
+    duration: "5:01",
+    description: "null"
+  },
+  {
+    id: 43,
+    title: "Seni Tari - BTS - 11 IPS 3 Tari Almost Done",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "299gxSb36lY",
+    duration: "2:25",
+    description: "null"
+  },
+  {
+    id: 44,
+    title: "Seni Tari - BTS - X IPS 3",
+    channel: "null",
+    category: "Seni Tari",
+    youtubeId: "QWgvvZvCJos",
+    duration: "5:53",
+    description: "null"
   }
 ];
