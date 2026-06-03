@@ -412,156 +412,156 @@ const VIDEOS = [
     description: "null"
   },
   {
-    "id": 45,
-    "title": "Film Pendek ID - 11 IPS 3 Sibuk (Jawa)",
-    "channel": null,
-    "category": "Film Pendek ID",
-    "youtubeId": "tEH-R4tpJW4",
-    "duration": "1:36",
-    "description": null
+    id: 45,
+    title: "Film Pendek ID - 11 IPS 3 Sibuk (Jawa)",
+    channel: "null",
+    category: "Film Pendek ID",
+    youtubeId: "tEH-R4tpJW4",
+    duration: "1:36",
+    description: "null"
   },
   {
-    "id": 46,
-    "title": "Film Pendek ID - 11 IPS 3 Sibuk (Indonesia)",
-    "channel": null,
-    "category": "Film Pendek ID",
-    "youtubeId": "_7gx5rUJiaA",
-    "duration": "7:45",
-    "description": null
+    id: 46,
+    title: "Film Pendek ID - 11 IPS 3 Sibuk (Indonesia)",
+    channel: "null",
+    category: "Film Pendek ID",
+    youtubeId: "_7gx5rUJiaA",
+    duration: "7:45",
+    description: "null"
   },
   {
-    "id": 47,
-    "title": "Film Pendek ID - 11 IPA 3 NASIB ORANG, SIAPA TAHU aliva, hanni, ike, monita",
-    "channel": null,
-    "category": "Film Pendek ID",
-    "youtubeId": "TFAP_huCw3o",
-    "duration": "8:13",
-    "description": null
+    id: 47,
+    title: "Film Pendek ID - 11 IPA 3 NASIB ORANG, SIAPA TAHU aliva, hanni, ike, monita",
+    channel: "null",
+    category: "Film Pendek ID",
+    youtubeId: "TFAP_huCw3o",
+    duration: "8:13",
+    description: "null"
   },
   {
-    "id": 48,
-    "title": "Film Pendek ID - 11 IPS 3 ADUH",
-    "channel": null,
-    "category": "Film Pendek ID",
-    "youtubeId": "jzejvWwUB6Y",
-    "duration": "5:26",
-    "description": null
+    id: 48,
+    title: "Film Pendek ID - 11 IPS 3 ADUH",
+    channel: "null",
+    category: "Film Pendek ID",
+    youtubeId: "jzejvWwUB6Y",
+    duration: "5:26",
+    description: "null"
   },
   {
-    "id": 49,
-    "title": "Film Pendek ID - 11 IPS 3 Kompilasi BOgi",
-    "channel": null,
-    "category": "Film Pendek ID",
-    "youtubeId": "W-dGvmT_6Dg",
-    "duration": "4:15",
-    "description": null
+    id: 49,
+    title: "Film Pendek ID - 11 IPS 3 Kompilasi BOgi",
+    channel: "null",
+    category: "Film Pendek ID",
+    youtubeId: "W-dGvmT_6Dg",
+    duration: "4:15",
+    description: "null"
   },
   {
-    "id": 50,
-    "title": "Film Pendek ID - 11 IPS 3 kita",
-    "channel": null,
-    "category": "Film Pendek ID",
-    "youtubeId": "JxR8P4XSr7I",
-    "duration": "4:34",
-    "description": null
+    id: 50,
+    title: "Film Pendek ID - 11 IPS 3 kita",
+    channel: "null",
+    category: "Film Pendek ID",
+    youtubeId: "JxR8P4XSr7I",
+    duration: "4:34",
+    description: "null"
   },
   {
-    "id": 51,
-    "title": "Film Pendek ID - 11 IPS 3 Copet",
-    "channel": null,
-    "category": "Film Pendek ID",
-    "youtubeId": "BIClLr1HCW4",
-    "duration": "5:50",
-    "description": null
+    id: 51,
+    title: "Film Pendek ID - 11 IPS 3 Copet",
+    channel: "null",
+    category: "Film Pendek ID",
+    youtubeId: "BIClLr1HCW4",
+    duration: "5:50",
+    description: "null"
   },
   {
-    "id": 52,
-    "title": "Film Pendek ID - 11 IPS 2 TAK SELALU",
-    "channel": null,
-    "category": "Film Pendek ID",
-    "youtubeId": "w5FC3Vn_cvs",
-    "duration": "3:28",
-    "description": null
+    id: 52,
+    title: "Film Pendek ID - 11 IPS 2 TAK SELALU",
+    channel: "null",
+    category: "Film Pendek ID",
+    youtubeId: "w5FC3Vn_cvs",
+    duration: "3:28",
+    description: "null"
   },
   {
-    "id": 53,
-    "title": "Film Pendek ID - 11 IPS 2 fadel and sepeda",
-    "channel": null,
-    "category": "Film Pendek ID",
-    "youtubeId": "xKqo2uXE8G8",
-    "duration": "5:44",
-    "description": null
+    id: 53,
+    title: "Film Pendek ID - 11 IPS 2 fadel and sepeda",
+    channel: "null",
+    category: "Film Pendek ID",
+    youtubeId: "xKqo2uXE8G8",
+    duration: "5:44",
+    description: "null"
   },
   {
-    "id": 54,
-    "title": "Film Pendek ID - 11 IPS 1Gadget   Drama Bahasa Indonesia",
-    "channel": null,
-    "category": "Film Pendek ID",
-    "youtubeId": "L6nOX9ogee8",
-    "duration": "9:43",
-    "description": null
+    id: 54,
+    title: "Film Pendek ID - 11 IPS 1Gadget   Drama Bahasa Indonesia",
+    channel: "null",
+    category: "Film Pendek ID",
+    youtubeId: "L6nOX9ogee8",
+    duration: "9:43",
+    description: "null"
   },
   {
-    "id": 55,
-    "title": "Film Pendek ID - 11 IPS 1 Unknown",
-    "channel": null,
-    "category": "Film Pendek ID",
-    "youtubeId": "D31hio8RpEk",
-    "duration": "5:20",
-    "description": null
+    id: 55,
+    title: "Film Pendek ID - 11 IPS 1 Unknown",
+    channel: "null",
+    category: "Film Pendek ID",
+    youtubeId: "D31hio8RpEk",
+    duration: "5:20",
+    description: "null"
   },
   {
-    "id": 56,
-    "title": "Film Pendek ID - 11 IPS 1 Rosemala, Refina, kiki, NUrul khusna",
-    "channel": null,
-    "category": "Film Pendek ID",
-    "youtubeId": "jeuCLUo40bA",
-    "duration": "3:31",
-    "description": null
+    id: 56,
+    title: "Film Pendek ID - 11 IPS 1 Rosemala, Refina, kiki, NUrul khusna",
+    channel: "null",
+    category: "Film Pendek ID",
+    youtubeId: "jeuCLUo40bA",
+    duration: "3:31",
+    description: "null"
   },
   {
-    "id": 57,
-    "title": "Film Pendek ID - 11 IPS 1 KESIALAN",
-    "channel": null,
-    "category": "Film Pendek ID",
-    "youtubeId": "OFp9eZkNL8Y",
-    "duration": "5:21",
-    "description": null
+    id: 57,
+    title: "Film Pendek ID - 11 IPS 1 KESIALAN",
+    channel: "null",
+    category: "Film Pendek ID",
+    youtubeId: "OFp9eZkNL8Y",
+    duration: "5:21",
+    description: "null"
   },
   {
-    "id": 58,
-    "title": "Film Pendek ID - 11 IPS 1 Kebelet",
-    "channel": null,
-    "category": "Film Pendek ID",
-    "youtubeId": "n5z29eygKpw",
-    "duration": "2:43",
-    "description": null
+    id: 58,
+    title: "Film Pendek ID - 11 IPS 1 Kebelet",
+    channel: "null",
+    category: "Film Pendek ID",
+    youtubeId: "n5z29eygKpw",
+    duration: "2:43",
+    description: "null"
   },
   {
-    "id": 59,
-    "title": "Film Pendek ID - 11 IPA 4 ANAKRAJIN",
-    "channel": null,
-    "category": "Film Pendek ID",
-    "youtubeId": "w7HK9UZMJlc",
-    "duration": "4:30",
-    "description": null
+    id: 59,
+    title: "Film Pendek ID - 11 IPA 4 ANAKRAJIN",
+    channel: "null",
+    category: "Film Pendek ID",
+    youtubeId: "w7HK9UZMJlc",
+    duration: "4:30",
+    description: "null"
   },
   {
-    "id": 60,
-    "title": "Film Pendek ID - 11 IPA 4 Sang Penantang",
-    "channel": null,
-    "category": "Film Pendek ID",
-    "youtubeId": "V4Cmz6OjbxQ",
-    "duration": "4:59",
-    "description": null
+    id: 60,
+    title: "Film Pendek ID - 11 IPA 4 Sang Penantang",
+    channel: "null",
+    category: "Film Pendek ID",
+    youtubeId: "V4Cmz6OjbxQ",
+    duration: "4:59",
+    description: "null"
   },
   {
-    "id": 61,
-    "title": "Film Pendek ID - 11 IPA 5 Nyontek",
-    "channel": null,
-    "category": "Film Pendek ID",
-    "youtubeId": "2vO9qNtxeGc",
-    "duration": "4:02",
-    "description": null
+    id: 61,
+    title: "Film Pendek ID - 11 IPA 5 Nyontek",
+    channel: "null",
+    category: "Film Pendek ID",
+    youtubeId: "2vO9qNtxeGc",
+    duration: "4:02",
+    description: "null"
   }
 ];
