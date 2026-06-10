@@ -13,7 +13,7 @@
 
   <!-- HEADER -->
   <header class="header">
-    <!-- ROW 1: home · search · dark mode (mirrors photo gallery navbar) -->
+    <!-- ROW 1: home · search · dark mode -->
     <div class="header-inner header-row1">
       <a href="https://begarlist16.github.io" class="home-btn" title="Kembali ke Homepage">
         <span class="home-emoji">🏠</span>
@@ -39,7 +39,7 @@
       </button>
     </div>
 
-    <!-- ROW 2: horizontal scrollable category strip -->
+    <!-- ROW 2: horizontal scrollable category strip with arrow nav -->
     <div class="category-row" id="categoryRow">
       <button class="cat-nav-btn cat-nav-left" id="catNavLeft" onclick="scrollCatNav(-1)" aria-label="Scroll kiri">‹</button>
       <div class="category-inner" id="categoryInner">
@@ -111,39 +111,6 @@
   <script src="data.js"></script>
   <script src="app.js"></script>
 
-  <!-- Scroll arrow visibility for category nav -->
-  <script>
-    (function () {
-      const inner = document.getElementById('categoryInner');
-      const left  = document.getElementById('catNavLeft');
-      const right = document.getElementById('catNavRight');
 
-      function updateArrows() {
-        if (!inner) return;
-        left.style.opacity  = inner.scrollLeft > 4 ? '1' : '0.3';
-        right.style.opacity = inner.scrollLeft < inner.scrollWidth - inner.clientWidth - 4 ? '1' : '0.3';
-      }
-
-      if (inner) {
-        inner.addEventListener('scroll', updateArrows, { passive: true });
-        updateArrows();
-      }
-
-      window.scrollCatNav = function (dir) {
-        if (!inner) return;
-        inner.scrollBy({ left: dir * 160, behavior: 'smooth' });
-      };
-
-      // search clear button visibility
-      const searchInput = document.getElementById('searchInput');
-      const searchClear = document.getElementById('searchClear');
-      if (searchInput && searchClear) {
-        searchInput.addEventListener('input', function () {
-          searchClear.style.display = this.value ? 'flex' : 'none';
-        });
-        searchClear.style.display = 'none';
-      }
-    })();
-  </script>
 </body>
 </html>

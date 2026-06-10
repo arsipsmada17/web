@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const saved = localStorage.getItem('sv-theme') || 'dark';
   setTheme(saved);
 
+  initCategoryNav();
+
+  // Search clear button initial state
+  document.getElementById('searchClear').style.display = 'none';
+
   renderVideos(VIDEOS);
   updateCount(VIDEOS.length);
 });
@@ -26,6 +31,71 @@ function toggleTheme() {
 function setTheme(theme) {
   document.documentElement.dataset.theme = theme;
   document.getElementById('themeIcon').textContent = theme === 'dark' ? '☀' : '◑';
+}
+
+// ── CATEGORY NAV (arrows + drag + wheel) ─────────────────────
+function initCategoryNav() {
+  const inner = document.getElementById('categoryInner');
+  if (!inner) return;
+
+  // Arrow buttons
+  updateCatNavBtns();
+  inner.addEventListener('scroll', updateCatNavBtns);
+
+  // Mouse drag
+  let isDragging    = false;
+  let dragStartX    = 0;
+  let dragScrollLeft = 0;
+
+  inner.addEventListener('mousedown', (e) => {
+    isDragging     = true;
+    dragStartX     = e.pageX - inner.offsetLeft;
+    dragScrollLeft = inner.scrollLeft;
+    inner.classList.add('dragging');
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x    = e.pageX - inner.offsetLeft;
+    const walk = (x - dragStartX) * 1.2;
+    inner.scrollLeft = dragScrollLeft - walk;
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!isDragging) return;
+    isDragging = false;
+    inner.classList.remove('dragging');
+  });
+
+  // Wheel → horizontal scroll
+  inner.addEventListener('wheel', (e) => {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      e.preventDefault();
+      inner.scrollLeft += e.deltaY * 1.5;
+      updateCatNavBtns();
+    }
+  }, { passive: false });
+}
+
+function scrollCatNav(dir) {
+  const inner = document.getElementById('categoryInner');
+  if (!inner) return;
+  inner.scrollBy({ left: dir * 200, behavior: 'smooth' });
+  setTimeout(updateCatNavBtns, 320);
+}
+
+function updateCatNavBtns() {
+  const inner = document.getElementById('categoryInner');
+  const btnL  = document.getElementById('catNavLeft');
+  const btnR  = document.getElementById('catNavRight');
+  if (!inner || !btnL || !btnR) return;
+
+  const atStart = inner.scrollLeft <= 2;
+  const atEnd   = inner.scrollLeft >= inner.scrollWidth - inner.clientWidth - 2;
+
+  btnL.disabled = atStart;
+  btnR.disabled = atEnd;
 }
 
 // ── CATEGORY FILTER ───────────────────────────────────────────
@@ -53,6 +123,9 @@ function filterCategory(cat, btn) {
 function handleSearch(val) {
   currentSearch = val.trim().toLowerCase();
 
+  const clearBtn = document.getElementById('searchClear');
+  clearBtn.style.display = currentSearch ? 'flex' : 'none';
+
   const notice = document.getElementById('searchNotice');
   if (currentSearch) {
     notice.style.display = 'flex';
@@ -69,6 +142,7 @@ function handleSearch(val) {
 function clearSearch() {
   currentSearch = '';
   document.getElementById('searchInput').value = '';
+  document.getElementById('searchClear').style.display = 'none';
   document.getElementById('searchNotice').style.display = 'none';
   const filtered = filterVideos();
   renderVideos(filtered);
