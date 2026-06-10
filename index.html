@@ -13,46 +13,48 @@
 
   <!-- HEADER -->
   <header class="header">
-    <div class="header-inner">
-      <a href="#" class="logo" onclick="showHome()">
-        <span class="logo-mark">▶</span>
-        <span class="logo-text">Begarlist 16</span>
+    <!-- ROW 1: home · search · dark mode (mirrors photo gallery navbar) -->
+    <div class="header-inner header-row1">
+      <a href="https://begarlist16.github.io" class="home-btn" title="Kembali ke Homepage">
+        <span class="home-emoji">🏠</span>
       </a>
 
+      <!-- Search bar -->
       <div class="search-wrap">
+        <span class="search-icon">🔍</span>
         <input
           type="text"
           id="searchInput"
           class="search-input"
-          placeholder="Cari video..."
+          placeholder="Cari video…"
+          autocomplete="off"
           oninput="handleSearch(this.value)"
         />
-        <span class="search-icon">⌕</span>
+        <button class="search-clear" id="searchClear" onclick="clearSearch()" aria-label="Hapus pencarian">✕</button>
       </div>
 
-      <div class="header-actions">
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-          <span id="themeIcon">☀</span>
-        </button>
+      <!-- Dark mode toggle -->
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span id="themeIcon">☀</span>
+      </button>
+    </div>
+
+    <!-- ROW 2: horizontal scrollable category strip -->
+    <div class="category-row" id="categoryRow">
+      <button class="cat-nav-btn cat-nav-left" id="catNavLeft" onclick="scrollCatNav(-1)" aria-label="Scroll kiri">‹</button>
+      <div class="category-inner" id="categoryInner">
+        <button class="cat-btn active" data-cat="all"            onclick="filterCategory('all',            this)">Semua</button>
+        <button class="cat-btn" data-cat="Seni Tari"             onclick="filterCategory('Seni Tari',             this)">Seni Tari</button>
+        <button class="cat-btn" data-cat="Film Pendek ID"        onclick="filterCategory('Film Pendek ID',        this)">Film Pendek ID</button>
+        <button class="cat-btn" data-cat="Short Movie EN"        onclick="filterCategory('Short Movie EN',        this)">Short Movie EN</button>
+        <button class="cat-btn" data-cat="Reportase"             onclick="filterCategory('Reportase',             this)">Reportase</button>
+        <button class="cat-btn" data-cat="Dokudrama"             onclick="filterCategory('Dokudrama',             this)">Dokudrama</button>
+        <button class="cat-btn" data-cat="Dokumentasi"           onclick="filterCategory('Dokumentasi',           this)">Dokumentasi</button>
+        <button class="cat-btn" data-cat="Kompilasi"             onclick="filterCategory('Kompilasi',             this)">Kompilasi</button>
       </div>
+      <button class="cat-nav-btn cat-nav-right" id="catNavRight" onclick="scrollCatNav(1)" aria-label="Scroll kanan">›</button>
     </div>
   </header>
-
-  <!-- CATEGORIES NAV -->
-  <nav class="category-nav">
-    <div class="category-inner">
-      <button class="cat-btn active" data-cat="all" onclick="filterCategory('all', this)">Semua</button>
-      <button class="cat-btn" data-cat="Seni Tari" onclick="filterCategory('Seni Tari', this)">Seni Tari</button>
-      <button class="cat-btn" data-cat="Film Pendek ID" onclick="filterCategory('Film Pendek ID', this)">Film Pendek ID</button>
-      <button class="cat-btn" data-cat="Short Movie EN" onclick="filterCategory('Short Movie EN', this)">Short Movie EN</button>
-      <button class="cat-btn" data-cat="Reportase" onclick="filterCategory('Reportase', this)">Reportase</button>
-      <button class="cat-btn" data-cat="Dokudrama" onclick="filterCategory('Dokudrama', this)">Dokudrama</button>
-      <button class="cat-btn" data-cat="Dokumentasi" onclick="filterCategory('Dokumentasi', this)">Dokumentasi</button>
-      <button class="cat-btn" data-cat="Kompilasi" onclick="filterCategory('Kompilasi', this)">Kompilasi</button>
-    </div>
-  </nav>
-
-
 
   <!-- MAIN CONTENT -->
   <main class="main" id="mainContent">
@@ -108,5 +110,40 @@
 
   <script src="data.js"></script>
   <script src="app.js"></script>
+
+  <!-- Scroll arrow visibility for category nav -->
+  <script>
+    (function () {
+      const inner = document.getElementById('categoryInner');
+      const left  = document.getElementById('catNavLeft');
+      const right = document.getElementById('catNavRight');
+
+      function updateArrows() {
+        if (!inner) return;
+        left.style.opacity  = inner.scrollLeft > 4 ? '1' : '0.3';
+        right.style.opacity = inner.scrollLeft < inner.scrollWidth - inner.clientWidth - 4 ? '1' : '0.3';
+      }
+
+      if (inner) {
+        inner.addEventListener('scroll', updateArrows, { passive: true });
+        updateArrows();
+      }
+
+      window.scrollCatNav = function (dir) {
+        if (!inner) return;
+        inner.scrollBy({ left: dir * 160, behavior: 'smooth' });
+      };
+
+      // search clear button visibility
+      const searchInput = document.getElementById('searchInput');
+      const searchClear = document.getElementById('searchClear');
+      if (searchInput && searchClear) {
+        searchInput.addEventListener('input', function () {
+          searchClear.style.display = this.value ? 'flex' : 'none';
+        });
+        searchClear.style.display = 'none';
+      }
+    })();
+  </script>
 </body>
 </html>
